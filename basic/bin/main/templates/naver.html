@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id="text">
+	<button>위도/경도 변환</button>
+	<hr>
+
+	<!-- 자바스크립트(jQuery) ajax 활용 -->
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+	<!-- getNaver 호출 -->
+
+	<!-- parsing 후 화면에 출력 -->
+
+	<script>
+		$('button').click(function() {
+			$.ajax({
+				url : '/getNaver',
+				type : 'get',
+				data : {
+					'text' : $('#text').val()
+				},
+				success : function(res) {
+					var message = res.message;
+					var result = message.result;
+					var translatedText = result.translatedText;
+					var html = '<h1>' + translatedText + '</h1>'
+					$('hr').after(html);
+				}
+			})
+		})
+	</script>
+
+</body>
+</html>

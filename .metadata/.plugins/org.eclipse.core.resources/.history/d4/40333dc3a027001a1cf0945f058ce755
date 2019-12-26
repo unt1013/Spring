@@ -1,0 +1,6 @@
+package com.ddusi.basic.controller;
+
+@Controller
+public class ServiceController {
+
+}

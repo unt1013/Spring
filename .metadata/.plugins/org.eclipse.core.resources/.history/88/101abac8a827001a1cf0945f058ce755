@@ -1,0 +1,20 @@
+package com.ddusi.basic.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class ServiceController {
+	@GetMapping("/kakao")
+	public String kakao()
+	{
+		return "kakao";
+	}
+	
+	@PostMapping("/naver")
+	public String naver()
+	{
+		return "naver";
+	}
+}
