@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<h1></h1>
+	
+	<div>
+		<span></span><br> 
+		<span></span><br>
+		<span></span><br>
+		<span></span>
+
+	</div>
+
+
+	<div th:each="data : ${Data[items]}">
+		<span th:text="${data[snippet][title]}"></span><br>
+		<span th:text="${data[snippet][description]}"></span><br>
+		<span th:text="${data[snippet][thumbnails][default][width]}"></span><br>
+		<span th:text="${data[snippet][thumbnails][default][height]}"></span><br>
+		
+		
+	</div>
+</body>
+</html>
